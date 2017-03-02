@@ -1,0 +1,362 @@
+@color1: #ffffff;
+@color2: #ff3000;
+@color3: #858585;
+@color4: #ff5a00;
+/*@color4: #ff6400;*/
+@color5: #000000;
+
+
+body, html {
+  background-color: @color5;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  position: relative;
+  font-family: Avenir,Helvetica,Lucida Grande,Arial,sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  color: @color1;
+}
+
+#trellis #home h3 {
+  color: @color1;
+  margin-top: 10px;
+}
+
+#trellis .jumbotron {
+  /*background: none;*/
+  background-color: @color4;
+  margin: 0;
+}
+
+#trellis #home.jumbotron {
+  height: 100%;
+  background: none;
+  display: flex;
+  align-items: center;
+  background: url(../images/video-1-poster-2.png) repeat-y;
+  border-bottom: 1px solid @color3;
+}
+
+#trellis #about.jumbotron {
+}
+
+#trellis .tr-papers {
+  //background: url(../images/papers.png);
+  padding: 0;
+  position: relative;
+}
+
+/*
+#trellis video.video-1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+}
+*/
+
+#trellis video.video-1 {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  background: url(../images/trellis_bg_001b.png) no-repeat;
+  background-size: cover;
+}
+
+/*
+.trellis-navbar-header .navbar-brand {
+  transform: translateX(-50%);
+  left: 50%;
+}
+
+
+.tr-header {
+}
+
+*/
+
+.trellis-logo {
+  margin-top: 1em;
+  margin-bottom: 2.5em;
+}
+
+.tr-divider {
+  margin: 0 1em 0 1em;
+  height: 0.3em;
+  background-color: @color1;
+}
+
+.tr-margin-bottom {
+  margin-bottom: 1em;
+}
+
+.tr-interstitial {
+  height: 40%;
+  background: none;
+}
+
+#trellis .jumbotron.tr-contact-div {
+  background: none;
+  margin-bottom: 0;
+  font-size: 30px;
+}
+
+#trellis .tr-copy {
+  color: @color4;
+  font-size: 30px;
+}
+
+#trellis a.tr-contact {
+  color: @color1;
+}
+
+.tr-list li, .tr-list dd {
+  font-size: 21px;
+  font-weight: 200;
+}
+
+.tr-list dt {
+  font-weight: 500;
+  margin-top: 1em;
+  font-size: 21px;
+  color: @color5;
+}
+
+#trellis label {
+  font-size: 21px;
+  font-weight: 500;
+  color: @color5;
+}
+
+ul > li {
+  list-style-type: circle;
+}
+
+.tr-top-div {
+  /*padding-top: 96px;*/
+}
+
+.tr-graph {
+  background: url(../images/trellis_bg_003b.png) repeat-y;
+  position: fixed;
+  /*min-width: 1914px;
+  min-height: 8280px;*/
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+
+#trellis a {
+  color: @color2;
+}
+
+
+#trellis .jumbotron {
+  //background-color: fade(@color4,90%);
+  /*background-color: @color4;*/
+}
+
+#trellis .jumbotron p, #trellis .tr-jumbotron div p {
+  font-size: 30px;
+}
+
+#trellis h1, #trellis h2, #trellis h3 {
+  color: @color1;
+  margin-top: 0;
+}
+
+#trellis h1 {
+  font-size: 40px;
+}
+
+#trellis h1 > small {
+  color: @color2;
+}
+
+li::marker {
+  color: @color5;
+}
+
+#trellis .tr-yale {
+  font-family: YaleNew, yale, TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif;
+  font-size: 17px;
+  font-weight: 500;
+  color: @color1;
+}
+
+#trellis a.tr-yale {
+  color: @color1;
+}
+
+#trellis .btn-default {
+  color: @color2;
+  background-color: @color5;
+  border-color: @color3;
+}
+
+#trellis .btn-large {
+  color: @color1;
+  background: none;
+  border-color: @color1;
+  font-size: x-large;
+  width: 150px;
+  margin: 10px;
+}
+
+#trellis input {
+  color: @color5;
+  background-color: @color1;
+  border-color: @color1;
+  font-size: 24px;
+  font-weight: 400;
+  height: 48px;
+  margin-top: 20px;
+}
+
+#trellis .col-md-6 {
+  padding-left: 0;
+}
+
+/*
+#trellis .tr-brand {
+  margin-right: 1em;
+}
+*/
+
+#trellis .tr-jumbotron {
+  //display: flex;
+  //align-items: stretch;
+}
+
+#trellis .tr-red {
+  background-color: @color2;
+  padding-right: 140px;
+  padding-top: 48px;
+  padding-bottom: 48px;
+  padding-left: 15px;
+  height: 450px;
+  //flex-grow: 1;
+}
+
+#trellis .tr-orange {
+  background-color: @color4;
+  padding-left: 140px;
+  padding-top: 48px;
+  padding-bottom: 48px;
+  height: 450px;
+  //flex-grow: 1;
+}
+
+#trellis .tr-bg-1 {
+  /*background: url(../images/trellis_bg_001b.png) repeat-y;*/
+  background: url(../images/video-2-poster-1.png) repeat-y;
+}
+
+#trellis .tr-bg-2 {
+  /*background: url(../images/trellis_bg_002b.png) repeat-y;*/
+  background: url(../images/video-3-poster-1.png) repeat-y;
+}
+
+#trellis .tr-bg-3 {
+  /*background: url(../images/trellis_bg_003b.png) repeat-y;*/
+  background: url(../images/video-4-poster-1.png) repeat-y;
+}
+
+
+
+/* Navbar customization*/
+
+#trellis .navbar .navbar-nav > li > a {
+  color: @color1;
+}
+
+#trellis .navbar-default {
+  /*background-color: fade(@color5, 50%);*/
+  background: none;
+  /*border-color: @color3;*/
+  border: none;
+  color: @color1;
+  font-weight: 500;
+}
+
+#trellis .navbar-brand, #trellis .navbar-text {
+  color: @color1;
+}
+
+#trellis .navbar-default .navbar-nav > .active > a {
+  /*background-color: @color2;*/
+  background-color: fade(@color2, 100%);
+  /*background: none;*/
+  /*border-bottom: 1px solid @color1;*/
+  color: @color1;
+}
+
+#trellis .navbar .nav .logo {
+  margin: 0;
+  float: none;
+  text-align: center;
+}
+
+#trellis .navbar .nav li.logo {
+  width: 1%;
+}
+
+#trellis .navbar .nav div.tr-divider {
+  margin: 1em 0 0 0;
+  padding: 0;
+  height: 1px;
+  background-color: @color1;
+}
+
+@media(min-width: 768px) {
+  #trellis .navbar .navbar-inner {
+    padding: 0;
+  }
+
+  #trellis .navbar .nav {
+    margin: 0;
+    padding-left: 4em;
+    padding-right: 4em;
+    display: table;
+    width: 100%;
+  }
+
+  #trellis .navbar .nav li {
+    display: table-cell;
+    width: 20%;
+    float: none;
+  }
+
+  #trellis .navbar > li {
+    width: auto;
+    display: table-cell;
+  }
+
+  #trellis .navbar .nav li a {
+    text-align: center;
+  }
+
+  #trellis .navbar .nav li:first-child a {
+    text-align: left;
+  }
+
+  #trellis .navbar .nav li:last-child a {
+    text-align: right;
+  }
+
+}

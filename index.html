@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="Trellis">
+    <meta name="author" content="Mark McKnight">
+    <title>Trellis</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="less/style.css" rel="stylesheet">
+
+    <script src="https://d3js.org/d3.v3.min.js"></script>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body data-spy="scroll" data-offset="118" id="trellis">
+<nav class="navbar navbar-default navbar-fixed-top tr-nav-top" role="navigation">
+
+    <!--div class="container-fluid text-center">
+        <div class="navbar-header trellis-navbar-header">
+            <a class="navbar-brand" href="#">
+                <img alt="trellis" src="images/trellis_ident_white_b.png" height="30px">
+            </a>
+        </div>
+    </div-->
+
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse navbar-ex1-collapse">
+        <ul class="nav navbar-nav logo">
+            <li class="text-center logo"><a class="navbar-brand tr-brand" href="#"><img src="images/trellis_ident_white_b.png" height="35" alt="Trellis"></a></li>
+        </ul>
+        <ul class="nav navbar-nav">
+            <div class="tr-divider"></div>
+        </ul>
+        <ul class="nav navbar-nav">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#research">Research</a></li>
+            <!--li><a href="#how-to-use">How&nbsp;to&nbsp;Use</a></li-->
+            <li><a href="#download">Download</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </div>
+    <!-- /.navbar-collapse -->
+</nav>
+
+<div class="jumbotron parallax" id="home">
+    <div class="container tr-header">
+        <div class="row">
+            <div class="col-md-4"> </div>
+            <div class="col-md-4 text-center">
+                <img class="trellis-logo" width="85%" src="images/trellis_ident_white_b.png" alt="trellis">
+            </div>
+            <div class="col-md-4"> </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4"> </div>
+            <div class="col-md-4">
+                <div class="tr-divider"></div>
+            </div>
+            <div class="col-md-4"> </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4"> </div>
+            <div class="col-md-4">
+                <h3 class="text-center">Watch the video to learn how Trellis is changing research</h3>
+            </div>
+            <div class="col-md-4"> </div>
+        </div>
+    </div>
+</div>
+
+<div class="jumbotron tr-top-div" id="about">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <h1 class="text-center">About</h1>
+            </div>
+            <div class="col-md-9">
+                <p>
+                    Trellis is a suite of software tools for creating, administering, and collecting survey data.
+                    What separates Trellis from other data collection tools is its support for mapping social networks.
+                </p>
+                <p>
+                    After enumerating all respondents in the sample, the surveyors can ask questions such as "Who do you consider your best friend?" or "Who do you go to for health advice?"
+                    A respondent can identify the named social contact by photograph.
+                </p>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div class="tr-interstitial tr-bg-1 parallax"></div>
+
+<div class="container-fluid tr-jumbotron" id="research">
+    <div class="row">
+        <div class="col-md-3 tr-orange" style="height: 606px;">
+            <h1>Research</h1>
+        </div>
+        <div class="col-md-9 tr-papers">
+            <img src="images/papers.png" width="100%">
+        </div>
+    </div>
+</div>
+<!--div class="jumbotron tr-top-div" id="research">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <h1 class="text-center">Research</h1>
+            </div>
+            <div class="col-md-9 tr-papers">
+            </div>
+        </div>
+    </div>
+</div-->
+
+<!--div class="tr-interstitial"></div>
+
+<div class="jumbotron" id="how-to-use">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <h1 class="text-center">How to Use</h1>
+            </div>
+            <div class="col-md-9">
+                <p>Instructions here</p>
+            </div>
+        </div>
+    </div>
+</div-->
+
+<div class="tr-interstitial tr-bg-2 parallax"></div>
+
+<div class="container-fluid tr-jumbotron" id="download">
+    <div class="row">
+        <div class="col-md-6 tr-orange">
+            <div class="col-md-6">
+                <h1 class="text-center">Download</h1>
+            </div>
+            <div class="col-md-6">
+                <p>This software can be downloaded free of charge</p>
+                <form>
+                    <div><button type="button" class="btn btn-large">Mac OS</button></div>
+                    <div><button type="button" class="btn btn-large">Linux</button></div>
+                    <div><button type="button" class="btn btn-large">Windows</button></div>
+                </form>
+            </div>
+        </div>
+        <div class="col-md-6 tr-red">
+            <p>If you are not part of an academic institution but want to use Trellis for research purposes, please contact us</p>
+            <form>
+                <div class="form-group">
+                    <label class="hidden" for="name">Name</label>
+                    <input type="text" class="form-control" id="name" placeholder="Name">
+                </div>
+                <div class="form-group">
+                    <label class="hidden" for="email">Email address</label>
+                    <input type="email" class="form-control" id="email" placeholder="Email">
+                </div>
+                <div><button type="submit" class="btn btn-large">Send</button></div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="tr-interstitial tr-bg-3 parallax"></div>
+
+<div class="jumbotron tr-contact-div" id="contact">
+    <div class="container">
+        <div class="col-md-3"></div>
+        <div class="col-md-9">
+            <div><a class="tr-contact" href="http://yins.yale.edu/">Yale Institute for Network Science</a></div>
+            <div><a class="tr-contact" href="http://humannaturelab.net/">Human Nature Lab</a></div>
+            <div><a class="tr-copy" href="http://yins.yale.edu/">&copy;2017 Yale Institute for Network Science</a></div>
+        </div>
+    </div>
+</div>
+
+<div class="tr-graph"></div>
+
+<!--video playsinline autoplay muted loop poster="images/trellis_bg_001b.png" id="bgvid">
+    <source src="video/Nodes_Animation_R002.mp4" type="video/mp4">
+</video-->
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="js/jquery.appear.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/scripts.js"></script>
+</body>
+</html>
