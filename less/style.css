@@ -88,6 +88,7 @@ html {
   background: none;
 }
 #trellis .jumbotron.tr-contact-div {
+  padding-top: 10em;
   background: none;
   margin-bottom: 0;
   font-size: 30px;
@@ -194,6 +195,9 @@ li::marker {
   margin-right: 1em;
 }
 */
+#trellis .tr-jumbotron {
+  background-color: #ff5a00;
+}
 #trellis .tr-red {
   background-color: #ff3000;
   padding-right: 140px;

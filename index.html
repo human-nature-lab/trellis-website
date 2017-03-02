@@ -91,10 +91,7 @@
 <div class="jumbotron tr-top-div" id="about">
     <div class="container">
         <div class="row">
-            <div class="col-md-3">
-                <h1 class="text-center">About</h1>
-            </div>
-            <div class="col-md-9">
+            <div class="col-md-12">
                 <p>
                     Trellis is a suite of software tools for creating, administering, and collecting survey data.
                     What separates Trellis from other data collection tools is its support for mapping social networks.
@@ -113,8 +110,7 @@
 
 <div class="container-fluid tr-jumbotron" id="research">
     <div class="row">
-        <div class="col-md-3 tr-orange" style="height: 606px;">
-            <h1>Research</h1>
+        <div class="col-md-3">
         </div>
         <div class="col-md-9 tr-papers">
             <img src="images/papers.png" width="100%">
@@ -150,7 +146,34 @@
 
 <div class="tr-interstitial tr-bg-2 parallax"></div>
 
-<div class="container-fluid tr-jumbotron" id="download">
+<div class="jumbotron" id="download">
+    <div class="container">
+        <div class="col-md-4">
+            <p>This software can be downloaded free of charge</p>
+            <form>
+                <div><button type="button" class="btn btn-large">Mac OS</button></div>
+                <div><button type="button" class="btn btn-large">Linux</button></div>
+                <div><button type="button" class="btn btn-large">Windows</button></div>
+            </form>
+        </div>
+        <div class="col-md-8">
+            <p>If you are not part of an academic institution but want to use Trellis for research purposes, please contact us</p>
+            <form>
+                <div class="form-group">
+                    <label class="hidden" for="name">Name</label>
+                    <input type="text" class="form-control" id="name" placeholder="Name">
+                </div>
+                <div class="form-group">
+                    <label class="hidden" for="email">Email address</label>
+                    <input type="email" class="form-control" id="email" placeholder="Email">
+                </div>
+                <div><button type="submit" class="btn btn-large">Send</button></div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!--div class="container-fluid tr-jumbotron" id="download">
     <div class="row">
         <div class="col-md-6 tr-orange">
             <div class="col-md-6">
@@ -180,17 +203,18 @@
             </form>
         </div>
     </div>
-</div>
+</div-->
 
 <div class="tr-interstitial tr-bg-3 parallax"></div>
 
 <div class="jumbotron tr-contact-div" id="contact">
     <div class="container">
-        <div class="col-md-3"></div>
-        <div class="col-md-9">
-            <div><a class="tr-contact" href="http://yins.yale.edu/">Yale Institute for Network Science</a></div>
-            <div><a class="tr-contact" href="http://humannaturelab.net/">Human Nature Lab</a></div>
-            <div><a class="tr-copy" href="http://yins.yale.edu/">&copy;2017 Yale Institute for Network Science</a></div>
+        <div class="col-md-12">
+            <div style="float:right">
+                <div><a class="tr-contact" href="http://yins.yale.edu/">Yale Institute for Network Science</a></div>
+                <div><a class="tr-contact" href="http://humannaturelab.net/">Human Nature Lab</a></div>
+                <div><a class="tr-copy" href="http://yins.yale.edu/">&copy;2017 Yale Institute for Network Science</a></div>
+            </div>
         </div>
     </div>
 </div>
