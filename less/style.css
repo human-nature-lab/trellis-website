@@ -1,7 +1,7 @@
-/*@color4: #ff6400;*/
 body,
 html {
   background-color: #000000;
+  z-index: -100;
   height: 100%;
   padding: 0;
   margin: 0;
@@ -11,228 +11,21 @@ html {
   font-size: 16px;
   color: #ffffff;
 }
-#trellis #home h3 {
-  color: #ffffff;
-  margin-top: 10px;
-}
-#trellis .jumbotron {
-  /*background: none;*/
-  background-color: #ff5a00;
-  margin: 0;
-}
-#trellis #home.jumbotron {
-  height: 100%;
-  background: none;
-  display: flex;
-  align-items: center;
-  background: url(../images/video-1-poster-2.png) repeat-y;
-  border-bottom: 1px solid #858585;
-}
-#trellis .tr-papers {
-  padding: 0;
-  position: relative;
-}
-/*
-#trellis video.video-1 {
-  position: absolute;
-  top: 0;
-  left: 0;
-  min-width: 100%;
-  min-height: 100%;
-  width: auto;
-  height: auto;
-  z-index: -100;
-}
-*/
-#trellis video.video-1 {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  min-width: 100%;
-  min-height: 100%;
-  width: auto;
-  height: auto;
-  z-index: -100;
-  -ms-transform: translateX(-50%) translateY(-50%);
-  -moz-transform: translateX(-50%) translateY(-50%);
-  -webkit-transform: translateX(-50%) translateY(-50%);
-  transform: translateX(-50%) translateY(-50%);
-  background: url(../images/trellis_bg_001b.png) no-repeat;
-  background-size: cover;
-}
-/*
-.trellis-navbar-header .navbar-brand {
-  transform: translateX(-50%);
-  left: 50%;
-}
-
-
-.tr-header {
-}
-
-*/
-.trellis-logo {
+/* Nav */
+#trellis .trellis-logo {
   margin-top: 1em;
   margin-bottom: 2.5em;
 }
-.tr-divider {
+#trellis .tr-divider {
   margin: 0 1em 0 1em;
   height: 0.3em;
   background-color: #ffffff;
 }
-.tr-margin-bottom {
-  margin-bottom: 1em;
-}
-.tr-interstitial {
-  height: 40%;
-  background: none;
-}
-#trellis .jumbotron.tr-contact-div {
-  padding-top: 10em;
-  background: none;
-  margin-bottom: 0;
-  font-size: 30px;
-}
-#trellis .tr-copy {
-  color: #ff5a00;
-  font-size: 30px;
-}
-#trellis a.tr-contact {
-  color: #ffffff;
-}
-.tr-list li,
-.tr-list dd {
-  font-size: 21px;
-  font-weight: 200;
-}
-.tr-list dt {
-  font-weight: 500;
-  margin-top: 1em;
-  font-size: 21px;
-  color: #000000;
-}
-#trellis label {
-  font-size: 21px;
-  font-weight: 500;
-  color: #000000;
-}
-ul > li {
-  list-style-type: circle;
-}
-.tr-top-div {
-  /*padding-top: 96px;*/
-}
-.tr-graph {
-  background: url(../images/trellis_bg_003b.png) repeat-y;
-  position: fixed;
-  /*min-width: 1914px;
-  min-height: 8280px;*/
-  top: 0;
-  left: 0;
-  z-index: -1;
-}
-#trellis a {
-  color: #ff3000;
-}
-#trellis .jumbotron {
-  /*background-color: @color4;*/
-}
-#trellis .jumbotron p,
-#trellis .tr-jumbotron div p {
-  font-size: 30px;
-}
-#trellis h1,
-#trellis h2,
-#trellis h3 {
-  color: #ffffff;
-  margin-top: 0;
-}
-#trellis h1 {
-  font-size: 40px;
-}
-#trellis h1 > small {
-  color: #ff3000;
-}
-li::marker {
-  color: #000000;
-}
-#trellis .tr-yale {
-  font-family: YaleNew, yale, TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif;
-  font-size: 17px;
-  font-weight: 500;
-  color: #ffffff;
-}
-#trellis a.tr-yale {
-  color: #ffffff;
-}
-#trellis .btn-default {
-  color: #ff3000;
-  background-color: #000000;
-  border-color: #858585;
-}
-#trellis .btn-large {
-  color: #ffffff;
-  background: none;
-  border-color: #ffffff;
-  font-size: x-large;
-  width: 150px;
-  margin: 10px;
-}
-#trellis input {
-  color: #000000;
-  background-color: #ffffff;
-  border-color: #ffffff;
-  font-size: 24px;
-  font-weight: 400;
-  height: 48px;
-  margin-top: 20px;
-}
-#trellis .col-md-6 {
-  padding-left: 0;
-}
-/*
-#trellis .tr-brand {
-  margin-right: 1em;
-}
-*/
-#trellis .tr-jumbotron {
-  background-color: #ff5a00;
-}
-#trellis .tr-red {
-  background-color: #ff3000;
-  padding-right: 140px;
-  padding-top: 48px;
-  padding-bottom: 48px;
-  padding-left: 15px;
-  height: 450px;
-}
-#trellis .tr-orange {
-  background-color: #ff5a00;
-  padding-left: 140px;
-  padding-top: 48px;
-  padding-bottom: 48px;
-  height: 450px;
-}
-#trellis .tr-bg-1 {
-  /*background: url(../images/trellis_bg_001b.png) repeat-y;*/
-  background: url(../images/video-2-poster-1.png) repeat-y;
-}
-#trellis .tr-bg-2 {
-  /*background: url(../images/trellis_bg_002b.png) repeat-y;*/
-  background: url(../images/video-3-poster-1.png) repeat-y;
-}
-#trellis .tr-bg-3 {
-  /*background: url(../images/trellis_bg_003b.png) repeat-y;*/
-  background: url(../images/video-4-poster-1.png) repeat-y;
-}
-/* Navbar customization*/
 #trellis .navbar .navbar-nav > li > a {
   color: #ffffff;
 }
 #trellis .navbar-default {
-  /*background-color: fade(@color5, 50%);*/
   background: none;
-  /*border-color: @color3;*/
   border: none;
   color: #ffffff;
   font-weight: 500;
@@ -242,10 +35,7 @@ li::marker {
   color: #ffffff;
 }
 #trellis .navbar-default .navbar-nav > .active > a {
-  /*background-color: @color2;*/
   background-color: #ff3000;
-  /*background: none;*/
-  /*border-bottom: 1px solid @color1;*/
   color: #ffffff;
 }
 #trellis .navbar .nav .logo {
@@ -290,5 +80,129 @@ li::marker {
   }
   #trellis .navbar .nav li:last-child a {
     text-align: right;
+  }
+}
+/* Jumbotron */
+#trellis .jumbotron {
+  background: none;
+  margin: 0;
+  padding: 0;
+}
+#trellis .jumbotron p {
+  font-size: 30px;
+}
+/* Content */
+#trellis div.tr-content {
+  position: absolute;
+  background-color: rgba(255, 90, 0, 0.9);
+  width: 100%;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding-top: 48px;
+  padding-bottom: 48px;
+}
+/* Home */
+#trellis #home.jumbotron h3 {
+  color: #ffffff;
+  margin-top: 10px;
+}
+#trellis #home.jumbotron {
+  height: 100%;
+  background: none !important;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #858585;
+}
+#trellis #home.jumbotron .tr-play-button {
+  font-size: 40px;
+  border-radius: 80px;
+  height: 80px;
+  width: 80px;
+  line-height: 74px;
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  padding: 0;
+  cursor: pointer;
+  border: 3px solid rgba(255, 255, 255, 0.2);
+  text-transform: uppercase;
+  font-family: Oxygen, sans-serif;
+}
+/* Research */
+#trellis #research p {
+  margin: 8em 3em 2em 3em;
+  font-size: 18px;
+}
+/* Download */
+#trellis .btn-default {
+  color: #ff3000;
+  background-color: #000000;
+  border-color: #858585;
+}
+#trellis .btn-large {
+  color: #ffffff;
+  background: none;
+  border-color: #ffffff;
+  font-size: x-large;
+  width: 150px;
+  margin: 10px;
+}
+#trellis input {
+  color: #000000;
+  background-color: #ffffff;
+  border-color: #ffffff;
+  font-size: 24px;
+  font-weight: 400;
+  height: 48px;
+  margin-top: 20px;
+}
+/* Contact */
+#trellis .jumbotron.tr-contact-div {
+  background: none;
+}
+#trellis div.tr-contact {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.1);
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  margin: 0;
+  padding-top: 48px;
+  padding-bottom: 48px;
+}
+#trellis .tr-copy {
+  color: #ff5a00;
+  font-size: 24px;
+}
+#trellis a.tr-contact {
+  color: #ffffff;
+  font-size: 30px;
+}
+/* Video */
+div.tr-video {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+video.tr-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -99;
+}
+@media (min-aspect-ratio: 16/9) {
+  video.tr-video {
+    height: 400%;
+    top: -150%;
+  }
+}
+@media (max-aspect-ratio: 16/9) {
+  video.tr-video {
+    width: 400%;
+    left: -150%;
   }
 }

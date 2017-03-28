@@ -6,14 +6,36 @@ $( window ).load(function() {
     //console.log("window height", $(window).height());
     var scrollRatio = .15;
     // Fade nav to black
-    $('.navbar-default').css("background-color", "rgba(0, 0, 0, " + Math.min(1, scrollPixels/$(window).height())) + ")";
+    $('.navbar-default').css("background-color", "rgba(0, 0, 0, " + Math.min(1, scrollPixels/($(window).height()-115))) + ")";
 
     // Fade active menu item to orange
     //$('#trellis .navbar-default .navbar-nav > .active > a').css("opacity", Math.min(1, scrollPixels/$(window).height()));
 
     // Add parallax effect
-    $('.parallax').css("background-position", "0 -" + (scrollPixels * scrollRatio) + "px");
+    $('.parallax').each(function(i, e){
+      var scrollTop = $(window).scrollTop();
+      var scrollBottom = scrollTop + $(window).height();
+      var elementTop = $(e).offset().top;
+      var elementBottom = elementTop + $(e).height();
+      if (elementTop <= scrollBottom && elementBottom >= scrollTop) {
+        //console.log("i", i);
+        //console.log("scrollTop", scrollTop);
+        //console.log("elementTop", elementTop);
+        var cssTop = (0.2 * (elementTop - scrollTop));
+        console.log("cssTop", cssTop);
+        $(e).css("top", cssTop  + "px");
+      }
+    });
+    /*$('.parallax').css("background-position", "0 -" + (scrollPixels * scrollRatio) + "px");*/
+    //$('.parallax').css("top", "-" + (scrollPixels * scrollRatio) + "px");
   });
+
+  /*
+  $('video').on('ended', function () {
+    this.load();
+    this.play();
+  });
+  */
 
   // Smooth scrolling
   $('a[href*="#"]:not([href="#"])').click(function() {
