@@ -22,6 +22,13 @@
     <![endif]-->
 </head>
 <body data-spy="scroll" data-offset="118" id="trellis">
+
+<div class="modal">
+    <div class="control close">&times;</div>
+    <div class="iframe">
+    </div>
+</div>
+
 <nav class="navbar navbar-default navbar-fixed-top tr-nav-top" role="navigation">
 
     <!-- Brand and toggle get grouped for better mobile display -->
@@ -45,14 +52,23 @@
         <ul class="nav navbar-nav">
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
-            <li><a href="#research">Research</a></li> <li><a href="#download">Download</a></li>
+            <li><a href="#research">Research</a></li>
+            <li><a href="#download">Download</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
     </div>
     <!-- /.navbar-collapse -->
 </nav>
 
-<div class="jumbotron tr-video" id="home">
+<div class="tr-video-outer-top">
+    <div class="tr-video-inner parallax">
+        <video class="tr-video" playsinline muted loop poster="video/TRELLIS_Website_BG002-5_poster.png">
+            <source src="video/TRELLIS_Website_BG001.mp4" type="video/mp4">
+        </video>
+    </div>
+</div>
+
+<div class="jumbotron tr-video-outer" id="home">
     <div class="container tr-header">
         <div class="row">
             <div class="col-md-4"> </div>
@@ -77,84 +93,115 @@
             <div class="col-md-4"> </div>
         </div>
     </div>
-    <video class="tr-video" playsinline autoplay muted loop poster="video/TRELLIS_Website_BG002-5_poster.png">
-        <source src="video/TRELLIS_Website_BG001.mp4" type="video/mp4">
-    </video>
 </div>
 
-<div class="jumbotron tr-video" id="about">
+<div class="jumbotron tr-video-outer" id="about">
     <div class="tr-content">
         <div class="container">
             <div class="row">
-                <div class="col-md-12">
+                <div class="col-md-4">
                     <p>
-                        Trellis is a suite of software tools for creating, administering, and collecting survey data.
-                        What separates Trellis from other data collection tools is its support for mapping social networks.
+                        Trellis is a suite of software tools for developing, administering, and collecting survey
+                        and social network data. What separates Trellis from other survey tools is its support
+                        for mapping social networks and its ability to integrate them with survey data.
                     </p>
+                </div>
+                <div class="col-md-4">
                     <p>
-                        After enumerating all respondents in the sample, the surveyors can ask questions such as "Who do you consider your best friend?" or "Who do you go to for health advice?"
-                        A respondent can identify the named social contact by photograph.
+                        You can use Trellis to conduct a photographic census of the respondent population in
+                        sociocentric study designs. Then it's possible to document the edges of the network by
+                        asking customized "name generator" questions such as "With whom do discuss important
+                        matters?"
+                    </p>
+                </div>
+                <div class="col-md-4">
+                    <p>
+                        An especially valuable feature of Trellis is that the respondents can identify their
+                        social contacts not only by name, but by photograph. This allows for accurate mapping
+                        of social networks even in low-literacy populations or where names may be similar
+                        or confusing.
                     </p>
                 </div>
             </div>
         </div>
     </div>
-    <div class="tr-video">
-        <video class="tr-video" playsinline autoplay muted loop poster="video/TRELLIS_Website_BG001_poster.png">
-            <source src="video/TRELLIS_Website_BG002.mp4" type="video/mp4">
-        </video>
+    <div class="tr-video-outer">
+        <div class="tr-video-inner parallax">
+            <video class="tr-video" playsinline muted loop poster="video/TRELLIS_Website_BG002-5_poster.png">
+                <source src="video/TRELLIS_Website_BG002.mp4" type="video/mp4">
+            </video>
+        </div>
     </div>
 </div>
 
-<div class="jumbotron tr-video" id="research">
+<div class="jumbotron tr-video-outer" id="research">
     <div class="tr-content">
         <div class="row">
-            <div class="col-md-3">
+            <div class="col-md-4">
                 <p>
-                    "Inequality and Visibility of Wealth in Experimental Social Networks,"<br>
-                    Nature<br>
-                    Published online 09 September 2015.<br>
-                    doi:10.1038/nature15392<br>
-                    A. Nishi, H. Shirado, D.G. Rand, and N.A. Christakis
                 </p>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-4">
                 <p>
-                    "Inequality and Visibility of Wealth in Experimental Social Networks,"<br>
-                    Nature<br>
-                    Published online 09 September 2015.<br>
-                    doi:10.1038/nature15392<br>
-                    A. Nishi, H. Shirado, D.G. Rand, and N.A. Christakis
+                    <strong>Exploiting social influence to magnify population-level behaviour change in maternal and child health:</strong><br>
+                    study protocol for a randomised controlled trial of network targeting algorithms in rural Honduras.<br>
+                    <a target="new" href="https://www.ncbi.nlm.nih.gov/pubmed/28289044">BMJ open. 2017 Mar 1;7(3):e012996&nbsp;<i style="font-size:10pt" class="glyphicon glyphicon-new-window"></i></a><br>
+                    Shakya HB, Stafford D, Hughes DA, Keegan T, Negron R, Broome J, McKnight M, Nicoll L, Nelson J, Iriarte E, Ordonez M.
                 </p>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-4">
                 <p>
-                    "Inequality and Visibility of Wealth in Experimental Social Networks,"<br>
-                    Nature<br>
-                    Published online 09 September 2015.<br>
-                    doi:10.1038/nature15392<br>
-                    A. Nishi, H. Shirado, D.G. Rand, and N.A. Christakis
-                </p>
-            </div>
-            <div class="col-md-3">
-                <p>
-                    "Inequality and Visibility of Wealth in Experimental Social Networks,"<br>
-                    Nature<br>
-                    Published online 09 September 2015.<br>
-                    doi:10.1038/nature15392<br>
-                    A. Nishi, H. Shirado, D.G. Rand, and N.A. Christakis
+                    <strong>Intimate partner violence norms cluster within households:</strong><br>
+                    an observational social network study in rural Honduras.<br>
+                    <a target="new" href="https://www.ncbi.nlm.nih.gov/pubmed/26951919">BMC public health. 2016 Mar 8;16(1):233&nbsp;<i style="font-size:10pt" class="glyphicon glyphicon-new-window"></i></a><br>
+                    Shakya HB, Hughes DA, Stafford D, Christakis NA, Fowler JH, Silverman JG.<br>
                 </p>
             </div>
         </div>
     </div>
-    <div class="tr-video">
-        <video class="tr-video" playsinline autoplay muted loop poster="video/TRELLIS_Website_BG002-5_poster.png">
-            <source src="video/TRELLIS_Website_BG003.mp4" type="video/mp4">
-        </video>
+    <div class="tr-video-outer">
+        <div class="tr-video-inner parallax">
+            <video class="tr-video" playsinline muted loop poster="video/TRELLIS_Website_BG002-5_poster.png">
+                <source src="video/TRELLIS_Website_BG003.mp4" type="video/mp4">
+            </video>
+        </div>
     </div>
 </div>
 
-<div class="jumbotron tr-video" id="download">
+<div class="jumbotron tr-video-outer" id="download">
+    <div class="tr-content">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <p>Available for download, <br>Fall 2017.</p>
+                </div>
+                <div class="col-md-8">
+                    <p>To be notified when Trellis is released, please sign up for our mailing list:</p>
+                    <form>
+                        <div class="form-group">
+                            <label class="hidden" for="name">Name</label>
+                            <input type="text" class="form-control" id="name" placeholder="Name">
+                        </div>
+                        <div class="form-group">
+                            <label class="hidden" for="email">Email address</label>
+                            <input type="email" class="form-control" id="email" placeholder="Email">
+                        </div>
+                        <div><button type="submit" class="btn btn-large">Send</button></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="tr-video-outer">
+        <div class="tr-video-inner parallax">
+            <video class="tr-video" playsinline muted loop poster="video/TRELLIS_Website_BG002-5_poster.png">
+                <source src="video/TRELLIS_Website_BG004.mp4" type="video/mp4">
+            </video>
+        </div>
+    </div>
+</div>
+
+<!--div class="jumbotron tr-video-outer" id="download">
     <div class="tr-content">
         <div class="container">
             <div class="row">
@@ -183,14 +230,17 @@
             </div>
         </div>
     </div>
-    <div class="tr-video">
-        <video class="tr-video" playsinline autoplay muted loop poster="video/TRELLIS_Website_BG002-5_poster.png">
-            <source src="video/TRELLIS_Website_BG004.mp4" type="video/mp4">
-        </video>
+    <div class="tr-video-outer">
+        <div class="tr-video-inner parallax">
+            <video class="tr-video" playsinline autoplay muted loop poster="video/TRELLIS_Website_BG002-5_poster.png">
+                <source src="video/TRELLIS_Website_BG004.mp4" type="video/mp4">
+            </video>
+        </div>
     </div>
-</div>
+</div-->
 
-<div class="jumbotron tr-video">
+<div class="jumbotron tr-video-outer">
+    <!--div class="tr-contact-divider">&nbsp;</div-->
     <div class="tr-contact">
         <div class="tr-contact-div" id="contact">
             <div class="container">
@@ -204,12 +254,15 @@
             </div>
         </div>
     </div>
-    <div class="tr-video">
-        <video class="tr-video" playsinline autoplay muted loop poster="video/TRELLIS_Website_BG002-5_poster.png">
-            <source src="video/TRELLIS_Website_BG005.mp4" type="video/mp4">
-        </video>
+    <div class="tr-video-outer">
+        <div class="tr-video-inner parallax">
+            <video class="tr-video" playsinline muted loop poster="video/TRELLIS_Website_BG002-5_poster.png">
+                <source src="video/TRELLIS_Website_BG005.mp4" type="video/mp4">
+            </video>
+        </div>
     </div>
 </div>
+
 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>

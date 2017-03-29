@@ -1,15 +1,69 @@
+var videoPlaying = [];
+
+function startVideos() {
+  // If videos are in the screen, start them, otherwise pause them
+  $('video.tr-video').each(function(i, e){
+    var scrollTop = $(window).scrollTop();
+    var scrollBottom = scrollTop + $(window).height();
+    var elementTop = $(e).parent().offset().top;
+    var elementBottom = elementTop + $(e).parent().height();
+    if (elementBottom > scrollTop && elementTop < scrollBottom) {
+      var video = $(e).get(0);
+      if (video.paused && !videoPlaying[i]) {
+        videoPlaying[i] = true;
+        video.play();
+      }
+    } else {
+      var video = $(e).get(0);
+      if (!video.paused && videoPlaying[i]) {
+        videoPlaying[i] = false;
+        video.pause();
+      }
+    }
+  });
+}
+
+function fadeNav() {
+  // Set nav to black if below Home section
+  var opacity = 1.0;
+  opacity = Math.min(1, $(window).scrollTop()/($(window).height()-115));
+
+  // Set nav to transparent if below Contact section
+  if (($(window).scrollTop() + $(window).height()) > $('#contact').offset().top) {
+    opacity = 0.0;
+  }
+
+  $('.navbar-default').css("background-color", "rgba(0, 0, 0, " + opacity  + ")");
+
+}
+
 $( window ).load(function() {
+
+  $('video').each(function(i) {
+    videoPlaying[i] = false;
+  });
+
+  /*
+  window.setInterval(function() {
+    var count = 0;
+    $('video.tr-video').each(function(i, e){
+      if (! $(e).get(0).paused) { count++; }
+    });
+    console.log(count + " videos playing")
+  }, 2000);
+  */
+
+
   $('body').scrollspy({ target: '.tr-nav-top' });
+
+  fadeNav();
+  startVideos();
 
   $(window).scroll(function(event) {
     var scrollPixels = $(window).scrollTop();
-    //console.log("window height", $(window).height());
-    var scrollRatio = .15;
-    // Fade nav to black
-    $('.navbar-default').css("background-color", "rgba(0, 0, 0, " + Math.min(1, scrollPixels/($(window).height()-115))) + ")";
 
-    // Fade active menu item to orange
-    //$('#trellis .navbar-default .navbar-nav > .active > a').css("opacity", Math.min(1, scrollPixels/$(window).height()));
+    // Fade nav to black
+    fadeNav();
 
     // Add parallax effect
     $('.parallax').each(function(i, e){
@@ -18,24 +72,15 @@ $( window ).load(function() {
       var elementTop = $(e).offset().top;
       var elementBottom = elementTop + $(e).height();
       if (elementTop <= scrollBottom && elementBottom >= scrollTop) {
-        //console.log("i", i);
-        //console.log("scrollTop", scrollTop);
-        //console.log("elementTop", elementTop);
-        var cssTop = (0.2 * (elementTop - scrollTop));
-        console.log("cssTop", cssTop);
+        var cssTop = (0.1 * (elementTop - scrollTop));
         $(e).css("top", cssTop  + "px");
       }
     });
-    /*$('.parallax').css("background-position", "0 -" + (scrollPixels * scrollRatio) + "px");*/
-    //$('.parallax').css("top", "-" + (scrollPixels * scrollRatio) + "px");
-  });
 
-  /*
-  $('video').on('ended', function () {
-    this.load();
-    this.play();
+    // If videos are in the screen, start them, otherwise pause them
+    startVideos();
+
   });
-  */
 
   // Smooth scrolling
   $('a[href*="#"]:not([href="#"])').click(function() {
@@ -49,6 +94,38 @@ $( window ).load(function() {
         return false;
       }
     }
+  });
+
+  // Modal video window functionality
+  function modal_open($modal) {
+    $('body').addClass('unscrollable');
+    $modal.show();
+  }
+
+  function modal_close($modal) {
+    $('body').removeClass('unscrollable');
+    $modal.hide();
+    // Play all videos that are visible
+    startVideos();
+  }
+
+  $('.tr-play-button').on('click', function () {
+    if ($('.modal .iframe iframe').length == 0) {
+
+      // Pause all videos
+      $('video.tr-video').each(function() {
+        $(this).get(0).pause();
+      });
+
+      $('.modal .iframe').append('<iframe width="100%" height="100%" frameborder="0" src="https://www.youtube.com/embed/mcELgjVASwM?autoplay=1">');
+    }
+    modal_open($('.modal'));
+  });
+
+  $('.modal .control.close').on('click', function () {
+    var $modal = $(this).parent();
+    modal_close($modal);
+    $modal.find('.iframe iframe').remove(); // TODO pause video instead
   });
 
   // Extend setInterval to allow for immediate execution
