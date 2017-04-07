@@ -1,6 +1,16 @@
 var videoPlaying = [];
 
 function startVideos() {
+
+  // Load the 720p videos for mobile
+  if ($(window).width() < 768) {
+    $('source').each(function(i, e) {
+      if (!videoPlaying[i]) {
+        $(e).parent().get(0).src = $(e).get(0).src.split('.mp4')[0] + "_720.mp4"
+      }
+    });
+  }
+
   // If videos are in the screen, start them, otherwise pause them
   $('video.tr-video').each(function(i, e){
     var scrollTop = $(window).scrollTop();
@@ -33,7 +43,7 @@ function fadeNav() {
     opacity = 0.0;
   }
 
-  $('.navbar-default').css("background-color", "rgba(0, 0, 0, " + opacity  + ")");
+  $('.navbar-default').css("background-color", "rgba(0, 0, 0, " + opacity + ")");
 
 }
 
@@ -113,8 +123,10 @@ $( window ).load(function() {
     if ($('.modal .iframe iframe').length == 0) {
 
       // Pause all videos
-      $('video.tr-video').each(function() {
-        $(this).get(0).pause();
+      $('video.tr-video').each(function(i, e) {
+        var video = $(e).get(0);
+        videoPlaying[i] = false;
+        video.pause();
       });
 
       $('.modal .iframe').append('<iframe width="100%" height="100%" frameborder="0" src="https://www.youtube.com/embed/mcELgjVASwM?autoplay=1">');

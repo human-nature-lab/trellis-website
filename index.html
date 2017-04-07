@@ -63,7 +63,7 @@
 <div class="tr-video-outer-top">
     <div class="tr-video-inner parallax">
         <video class="tr-video" playsinline muted loop poster="video/TRELLIS_Website_BG002-5_poster.png">
-            <source src="video/TRELLIS_Website_BG001.mp4" type="video/mp4">
+            <source class="video-src" src="video/TRELLIS_Website_BG001.mp4" type="video/mp4">
         </video>
     </div>
 </div>
@@ -95,6 +95,8 @@
     </div>
 </div>
 
+<div class="tr-interstitial"></div>
+
 <div class="jumbotron tr-video-outer" id="about">
     <div class="tr-content">
         <div class="container">
@@ -110,7 +112,7 @@
                     <p>
                         You can use Trellis to conduct a photographic census of the respondent population in
                         sociocentric study designs. Then it's possible to document the edges of the network by
-                        asking customized "name generator" questions such as "With whom do discuss important
+                        asking customized "name generator" questions such as "With whom do you discuss important
                         matters?"
                     </p>
                 </div>
@@ -134,27 +136,32 @@
     </div>
 </div>
 
+<div class="tr-interstitial"></div>
+
 <div class="jumbotron tr-video-outer" id="research">
     <div class="tr-content">
         <div class="row">
             <div class="col-md-4">
                 <p>
+                    <strong>Social network targeting to maximise population behaviour change: a cluster randomised controlled trial,</strong>
+                    <a target="new" href="http://thelancet.com/journals/lancet/article/PIIS0140-6736(15)60095-2/fulltext">The Lancet, Published online May 5, 2015 http://dx.doi.org/10.1016/S0140-6736(15)60095-2 <i style="font-size:10pt" class="glyphicon glyphicon-new-window"></i></a>
+                    D.A. Kim, A.R. Hwong, D. Stafford, D.A. Hughes, A.J. O’Malley, J.H. Fowler, and N.A. Christakis.
                 </p>
             </div>
             <div class="col-md-4">
                 <p>
-                    <strong>Exploiting social influence to magnify population-level behaviour change in maternal and child health:</strong><br>
-                    study protocol for a randomised controlled trial of network targeting algorithms in rural Honduras.<br>
-                    <a target="new" href="https://www.ncbi.nlm.nih.gov/pubmed/28289044">BMJ open. 2017 Mar 1;7(3):e012996&nbsp;<i style="font-size:10pt" class="glyphicon glyphicon-new-window"></i></a><br>
-                    Shakya HB, Stafford D, Hughes DA, Keegan T, Negron R, Broome J, McKnight M, Nicoll L, Nelson J, Iriarte E, Ordonez M.
+                    <strong>Exploiting social influence to magnify population-level behaviour change in maternal and child health:</strong>
+                    study protocol for a randomised controlled trial of network targeting algorithms in rural Honduras.
+                    <a target="new" href="https://www.ncbi.nlm.nih.gov/pubmed/28289044">BMJ open. 2017 Mar 1;7(3):e012996&nbsp;<i style="font-size:10pt" class="glyphicon glyphicon-new-window"></i></a>
+                    Shakya HB, Stafford D, Hughes DA, Keegan T, Negron R, Broome J, McKnight M, Nicoll L, Nelson J, Iriarte E, Ordonez M, Airoldi E, Fowler JH, Christakis NA
                 </p>
             </div>
             <div class="col-md-4">
                 <p>
-                    <strong>Intimate partner violence norms cluster within households:</strong><br>
-                    an observational social network study in rural Honduras.<br>
-                    <a target="new" href="https://www.ncbi.nlm.nih.gov/pubmed/26951919">BMC public health. 2016 Mar 8;16(1):233&nbsp;<i style="font-size:10pt" class="glyphicon glyphicon-new-window"></i></a><br>
-                    Shakya HB, Hughes DA, Stafford D, Christakis NA, Fowler JH, Silverman JG.<br>
+                    <strong>Intimate partner violence norms cluster within households:</strong>
+                    an observational social network study in rural Honduras.
+                    <a target="new" href="https://www.ncbi.nlm.nih.gov/pubmed/26951919">BMC public health. 2016 Mar 8;16(1):233&nbsp;<i style="font-size:10pt" class="glyphicon glyphicon-new-window"></i></a>
+                    Shakya HB, Hughes DA, Stafford D, Christakis NA, Fowler JH, Silverman JG.
                 </p>
             </div>
         </div>
@@ -168,6 +175,8 @@
     </div>
 </div>
 
+<div class="tr-interstitial"></div>
+
 <div class="jumbotron tr-video-outer" id="download">
     <div class="tr-content">
         <div class="container">
@@ -177,16 +186,18 @@
                 </div>
                 <div class="col-md-8">
                     <p>To be notified when Trellis is released, please sign up for our mailing list:</p>
-                    <form>
+                    <form class="row" method="post" action="http://mailman.yale.edu/mailman/subscribe/trellis">
                         <div class="form-group">
-                            <label class="hidden" for="name">Name</label>
-                            <input type="text" class="form-control" id="name" placeholder="Name">
+                            <label class="sr-only" for="tr-email">Email</label>
+                            <input type="email" class="form-control" name="email" id="tr-email" placeholder="Enter your email">
                         </div>
                         <div class="form-group">
-                            <label class="hidden" for="email">Email address</label>
-                            <input type="email" class="form-control" id="email" placeholder="Email">
+                            <label class="sr-only" for="tr-fullname">Your name (optional)</label>
+                            <input type="text" class="form-control" name="fullname" id="tr-fullname" placeholder="Enter your name">
                         </div>
-                        <div><button type="submit" class="btn btn-large">Send</button></div>
+                        <div>
+                            <button type="submit" class="btn btn-large">Sign Up</button>
+                        </div>
                     </form>
                 </div>
             </div>
@@ -200,6 +211,8 @@
         </div>
     </div>
 </div>
+
+<div class="tr-interstitial"></div>
 
 <!--div class="jumbotron tr-video-outer" id="download">
     <div class="tr-content">
@@ -246,10 +259,21 @@
             <div class="container">
                 <div class="col-md-12">
                     <div style="float:right">
+                        <div>
+                        <script language="JavaScript">
+                          var username = "yins";
+                          var hostname = "yale.edu";
+                          var linktext = "Contact us at " + username + "@" + hostname ;
+                          document.write("<a class='tr-contact' href='" + "mail" + "to:" + username + "@" + hostname + "?subject=Trellis'>" + linktext + "</a>");
+                        </script>
+                        </div>
                         <div><a class="tr-contact" href="http://yins.yale.edu/">Yale Institute for Network Science</a></div>
                         <div><a class="tr-contact" href="http://humannaturelab.net/">Human Nature Lab</a></div>
                         <div><a class="tr-copy" href="http://yins.yale.edu/">&copy;2017 Yale Institute for Network Science</a></div>
                     </div>
+                </div>
+                <div class="col-md-12 tr-margin-top">
+                    <div class="text-center">Support for the development of Trellis was provided by the Roybal Center for the Study of Networks and Well-Being (NIH grant P30-AG034420)</div>
                 </div>
             </div>
         </div>
